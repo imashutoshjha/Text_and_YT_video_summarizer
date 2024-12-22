@@ -22,7 +22,7 @@ prompt=PromptTemplate(template=prompt_template,input_varibles=["text"])
 from langchain.schema import Document
 from youtube_transcript_api import YouTubeTranscriptApi
 
-if st.button("Summarize the content from YT or webstie"):
+if st.button("Summarize the content from YT or website"):
     llm=ChatGroq(model="gemma2-9b-it",groq_api_key=groq_api_key)
     if not groq_api_key.strip() or not generic_url.strip():
         st.error("Please provide the information to get started")
